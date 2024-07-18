@@ -10,3 +10,27 @@
 #' after <- c(95, 100, 97, 102, 108)
 #' visualize_vot(before, after)
 #' @export
+
+visualize_vot <- function(before, after) {
+  if (length(before) != length(after)) {
+    stop("Both 'before' and 'after' must be numeric vectors of the same length.")
+  }
+
+  library(ggplot2)
+  library(dplyr)
+
+  # Calculate differences
+  d <- before - after
+
+  # Create a data frame
+  data <- data.frame(d = d)
+
+  # Generate boxplot
+  p <- data %>%
+    ggplot(aes(y = d)) +
+    geom_boxplot() +
+    labs(title = "Boxplot of VOT Differences", y = "Difference in VOT before and after the stimuli (ms)") +
+    theme_minimal()
+
+  return(p)
+}
