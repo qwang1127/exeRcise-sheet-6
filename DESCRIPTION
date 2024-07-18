@@ -3,7 +3,7 @@ Type: Package
 Title: VOT Influence Analysis
 Version: 0.1.0
 Author: Qiran Wang
-Maintainer: Qirann Wang <qiran.wang@campus.lmu.de>
+Maintainer: Qiran Wang <qiran.wang@campus.lmu.de>
 Description: The vot package provides functions to analyze Voice Onset Time (VOT) data before 
     and after speakers perceived auditory stimuli. It includes functions for visualizing 
     differences in VOT using boxplots and performing statistical tests to determine if 
@@ -11,3 +11,6 @@ Description: The vot package provides functions to analyze Voice Onset Time (VOT
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
